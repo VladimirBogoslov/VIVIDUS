@@ -1,4 +1,5 @@
 Scenario: Create account
+Meta: @skip
 Given I am on a page with the URL 'https://www.reddit.com/'
 When I click on element located `By.xpath(//a[text()='Sign Up'])`
 When I switch to frame located `By.xpath(//iframe[contains(@src,'header_signup')])`
@@ -19,3 +20,8 @@ When I click on element located `By.xpath(//button[text()='Continue'])`
 When I click on element located `By.xpath(//button[text()='Skip'])`
 
 Scenario: Perform search by top search bar
+Given I am on a page with the URL 'https://www.reddit.com/'
+When I click on element located `By.xpath(//input[contains(@placeholder,'Search Reddit')])`
+When I enter `${SearchItem}` in field located `By.xpath(//input[contains(@placeholder,'Search Reddit')])`
+When I change context to element located `By.xpath(//div[@id='SearchDropdownContent'])`
+
