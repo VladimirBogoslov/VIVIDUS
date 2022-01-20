@@ -7,7 +7,6 @@ When I enter `${registeredUserEmail}` in field located `By.xpath(//*[@id="regEma
 When I click on element located `By.xpath(//*[text()='Continue'])`
 When I add `${registeredUserName}` to field located `By.xpath(//*[@id="regUsername"])`
 And I add `$registeredUserPass` to field located `By.xpath(//*[@id="regPassword"])`
-When I set page load timeout to `PT300S`
 When I click on element located `By.xpath(//button[text()='Sign Up'])`
 When I click on element located `By.xpath(//button[text()='Skip'])`
 When I click on element located `By.xpath(//button[contains(text(),'Anime')])`
