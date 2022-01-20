@@ -17,3 +17,5 @@ When I click on element located `By.xpath(//button[text()='Continue'])`
 When I click on element located `By.xpath(//div[text()='r/popheads'])`
 When I click on element located `By.xpath(//button[text()='Continue'])`
 When I click on element located `By.xpath(//button[text()='Skip'])`
+
+Scenario: Perform search by top search bar
