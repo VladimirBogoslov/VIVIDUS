@@ -21,7 +21,8 @@ When I click on element located `By.xpath(//button[text()='Skip'])`
 
 Scenario: Perform search by top search bar
 Given I am on a page with the URL 'https://www.reddit.com/'
-When I click on element located `By.xpath(//input[contains(@placeholder,'Search Reddit')])`
+When I change context to element located `By.xpath(//input[contains(@placeholder,'Search Reddit')])`
 When I enter `${SearchItem}` in field located `By.xpath(//input[contains(@placeholder,'Search Reddit')])`
-When I change context to element located `By.xpath(//div[@id='SearchDropdownContent'])`
-
+When I press ENTER on keyboard
+When I set page load timeout to `PT15S`
+When I wait until the page title contains the text ''ukulele'
