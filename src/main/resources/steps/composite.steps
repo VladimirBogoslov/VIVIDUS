@@ -2,3 +2,9 @@ Composite: When I login as a registered user
 When I enter `${registeredUserName}` in field located `By.xpath(//*[@id="loginUsername"])`
 And I enter `${registeredUserPass}` in field located `By.xpath(//*[@id="loginPassword"])`
 When I click on element located `By.xpath(//*[@type='submit'])`
+
+Composite: When I login as one of presented user from example table
+When I click on element located `By.xpath(//*[@href='/login'])`
+When I wait until the page has the title 'Log in to Trello'
+When I enter `${UserEmail2}` in field located `By.xpath(//input [@placeholder="Enter email"])`
+And I enter `${UserPass2}` in field located `By.xpath(//input [@placeholder="Enter password"])`
