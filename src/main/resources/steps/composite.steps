@@ -1,0 +1,4 @@
+Composite: When I login as a registered user
+When I enter `${registeredUserName}` in field located `By.xpath(//*[@id="loginUsername"])`
+And I enter `${registeredUserPass}` in field located `By.xpath(//*[@id="loginPassword"])`
+When I click on element located `By.xpath(//*[@type='submit'])`
