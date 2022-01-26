@@ -16,7 +16,7 @@ Examples:
 |${UserEmail2}|${UserPass2}|
 
 Scenario: Login account (negative)
-
+Meta: @skip
 Given I am on the main application page
 When I click on element located `By.xpath(//*[@href='/login'])`
 When I wait until the page has the title 'Log in to Trello'
