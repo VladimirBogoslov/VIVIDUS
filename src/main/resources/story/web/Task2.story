@@ -27,5 +27,11 @@ When I wait until element located `By.xpath(//p[contains(text(),'There')])` appe
 Then number of elements found by `By.xpath(//p[contains(text(),'There')])` is greater than `0`
 Then field located `By.xpath(//p[contains(text(),'There')])` exists
 Examples:
-|UserEmail    |Password    |
-|${UserEmail3}|${UserPass3}|
+|UserEmail                  |Password                               |
+|#generate(Name.firsrName)}||#generate(regexify '[abcdfghiah]{10}")}|
+
+GivenStories: story/precondition/Precondition.story 
+Scenario: Visual check for logged in user
+Given I am on a page with the URL 'https://trello.com/uladzimirbahaslou/boards'
+When I login in system even though the warning message 'Account can be private'
+
