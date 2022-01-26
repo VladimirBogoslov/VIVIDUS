@@ -34,4 +34,8 @@ GivenStories: story/precondition/Precondition.story
 Scenario: Visual check for logged in user
 Given I am on a page with the URL 'https://trello.com/uladzimirbahaslou/boards'
 When I login in system even though the warning message 'Account can be private'
+When I COMPARE_AGAINST baseline with `test` ignoring:
+|ELEMENT            |AREA                  |ACCEPTABLE_DIFF_PERCENTAGE|
+|By.xpath(.//header)|By.cssSelector(footer)|5                         |
+
 
