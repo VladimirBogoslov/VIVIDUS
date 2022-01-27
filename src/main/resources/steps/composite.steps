@@ -13,3 +13,5 @@ When I click on element located `By.xpath(//input[@value='Log in with Atlassian'
 When I enter `${UserPass2}` in field located `By.xpath(//input [@placeholder="Enter password"])`
 When I click on element located `By.xpath(//button[@type='submit'])`
 When I wait until element located `By.xpath(//span[contains(text(),'Uladzimir_Bahaslou')])` appears
+Then number of elements found by `By.xpath(//span[contains(text(),'Uladzimir_Bahaslou')])` is greater than `0`
+Then field located `By.xpath(//span[contains(text(),'Uladzimir_Bahaslou')])` exists

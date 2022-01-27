@@ -14,7 +14,7 @@ Then field located `By.xpath(//span[contains(text(),'Uladzimir_Bahaslou')])` exi
 Examples:
 |UserEmail    |Password    |
 |${UserEmail2}|${UserPass2}|
-
+ 
 Scenario: Login account (negative)
 Meta: @skip
 Given I am on the main application page
@@ -31,11 +31,10 @@ Examples:
 |#generate(Name.firsrName)}||#generate(regexify '[abcdfghiah]{10}")}|
 
 GivenStories: story/precondition/Precondition.story 
-Scenario: Visual check for logged in user
+Scenario: Visual validation of 
 Given I am on a page with the URL 'https://trello.com/uladzimirbahaslou/boards'
 When I login in system even though the warning message 'Account can be private'
-When I COMPARE_AGAINST baseline with `test` ignoring:
-|ELEMENT            |AREA                  |ACCEPTABLE_DIFF_PERCENTAGE|
-|By.xpath(.//header)|By.cssSelector(footer)|5                         |
-
-
+When I find <= '1' elements by By.xpath(//h1[contains(text(),'Remote Team Hub')]) and for each element do
+|step                                                                                       |                             
+|When I click on an element by the xpath '//h1[contains(text(),'Remote Team Hub')]'         |
+|When I wait until the page title contains the text 'Remote Team Hub'                       | 
